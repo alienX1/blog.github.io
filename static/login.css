@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /* background: rgb(52, 55, 58); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("orange.jpg");
+}
+.box{
+    height: 400px;
+    width: 300px;
+    background: rgb(34, 33, 33);
+    box-shadow: 18px 20px 8px 0px rgb(0 0 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box form h1{
+    cursor: pointer;
+    font-family: sans-serif;
+    color: white;
+    margin: 10px;
+}
+.box form input{
+    font-size: 1rem;
+    color: rgb(192, 192, 192);
+    text-align: center;
+    outline: none;
+    border: 2px solid rgb(98, 191, 235);
+    background: transparent;
+    margin: 10px;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+}
+.box form div input{
+    font-size: 1rem;
+    color: rgb(192, 192, 192);
+    text-align: center;
+    outline: none;
+    border: 2px solid rgb(59, 194, 59);
+    background: transparent;
+    margin: 10px;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+}
+.box form p{
+    margin-bottom: 22px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.separator{
+    display: flex;
+    margin: 10px;
+}
+.line{
+    background: white;
+    width: 250px;
+    height: 3px;
+    margin: 0px 5px;
+}
+.circle{
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: white;
+}
+
+.signup li{
+    list-style: none;
+}
+.signup li a{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid rgb(59, 194, 59);
+    color: white;
+    background: transparent;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px 15px;
+}

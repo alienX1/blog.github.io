@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <img src="static/logo.png" alt="">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#post" class="nav-link">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#intro" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="intro-sec" id="intro">
+        <div class="right">
+            <h1>Hey there!</h1>
+            <h2>Welcome to my page</h2>
+            <p>Here you will find various type
+                of Article on nature, society,
+                tecnology, etc. I will be updating the
+                content regularly, so that you never get bored.
+                You will always find something new to learn here.
+                So without wasting time please eplore our full blog and
+                your valueble opinion to improve this page. If you like
+                our work please support us by donating some amount
+                according to your choice.
+            </p>
+        </div>
+
+        <div class="left">
+            <img src="static/color-spectrum.png" class="first" />
+            <img src="static/logo.png" class="second" />
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="leftcolumn">
+          {% for post in posts reversed %}
+          <div class="card">
+            <a href="/post/{{post.id}}">
+              <h2>{{post.title}}</h2>
+              <h5>{{post.created_at}}</h5>
+              <p>{{post.body|truncatewords:20}}</p>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    <section class="footer-sec" id="contact">
+        <img src="static/fb.png" alt="">
+        <img src="static/ig.png" alt="">
+        <img src="static/tw.png" alt="">
+    </section>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
+<!-- |truncatewords:20 -->
